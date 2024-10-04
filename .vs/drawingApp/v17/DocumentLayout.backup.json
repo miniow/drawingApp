@@ -1,0 +1,234 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zymci\\source\\repos\\drawingApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\viewmodels\\shapeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:viewmodels\\shapeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\models\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:models\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\models\\rectangleparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:models\\rectangleparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zymci\\AppData\\Local\\Temp\\.vsdbgsrc\\938a6d9560baea5cff1575f66a3249af71185f80102ba85710b05b5219cfa0af\\Visual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\converters\\shapetypenameconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:converters\\shapetypenameconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\converters\\shapetypetovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:converters\\shapetypetovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\models\\shapeparameterbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:models\\shapeparameterbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zymci\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-03T22:08:40.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Circle.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\Circle.cs",
+              "RelativeDocumentMoniker": "Models\\Circle.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\Circle.cs",
+              "RelativeToolTip": "Models\\Circle.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T23:28:42.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ShapeTypeNameConverter.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Converters\\ShapeTypeNameConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\ShapeTypeNameConverter.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Converters\\ShapeTypeNameConverter.cs",
+              "RelativeToolTip": "Converters\\ShapeTypeNameConverter.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T23:35:03.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Visual.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\AppData\\Local\\Temp\\.vsdbgsrc\\938a6d9560baea5cff1575f66a3249af71185f80102ba85710b05b5219cfa0af\\Visual.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\938a6d9560baea5cff1575f66a3249af71185f80102ba85710b05b5219cfa0af\\Visual.cs",
+              "ToolTip": "C:\\Users\\zymci\\AppData\\Local\\Temp\\.vsdbgsrc\\938a6d9560baea5cff1575f66a3249af71185f80102ba85710b05b5219cfa0af\\Visual.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\938a6d9560baea5cff1575f66a3249af71185f80102ba85710b05b5219cfa0af\\Visual.cs",
+              "ViewState": "AgIAAF4HAAAAAAAAAAAewG0HAAAKAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T23:12:32.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\RelayCommand.cs",
+              "RelativeToolTip": "ViewModels\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T22:36:17.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShapeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\ShapeViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ShapeViewModel.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\ShapeViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ShapeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T01:19:48.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAuwMgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T22:08:40.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\AssemblyInfo.cs",
+              "RelativeToolTip": "AssemblyInfo.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T23:12:53.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RectangleParameters.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\RectangleParameters.cs",
+              "RelativeDocumentMoniker": "Models\\RectangleParameters.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\RectangleParameters.cs",
+              "RelativeToolTip": "Models\\RectangleParameters.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T00:43:09.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ShapeTypeToVisibilityConverter.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Converters\\ShapeTypeToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\ShapeTypeToVisibilityConverter.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Converters\\ShapeTypeToVisibilityConverter.cs",
+              "RelativeToolTip": "Converters\\ShapeTypeToVisibilityConverter.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T23:18:30.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAUwKoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T22:33:24.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ShapeParameterBase.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\ShapeParameterBase.cs",
+              "RelativeDocumentMoniker": "Models\\ShapeParameterBase.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\ShapeParameterBase.cs",
+              "RelativeToolTip": "Models\\ShapeParameterBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T00:41:15.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "XamlReader.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",
+              "ToolTip": "C:\\Users\\zymci\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs[Tylko do odczytu]",
+              "ViewState": "AgIAAJgBAAAAAAAAAAAYwKABAAADAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T23:17:32.033Z",
+              "EditorCaption": "[Tylko do odczytu]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
