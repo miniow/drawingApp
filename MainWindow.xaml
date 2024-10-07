@@ -6,6 +6,7 @@
         xmlns:viewModels="clr-namespace:drawingApp.ViewModels"
         xmlns:local="clr-namespace:drawingApp"
         xmlns:models="clr-namespace:drawingApp.Models"
+        xmlns:controls="clr-namespace:drawingApp.Controls"
         xmlns:converters="clr-namespace:drawingApp.Converters"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -15,63 +16,153 @@
     <Window.Resources>
         <converters:ShapeTypeToVisibilityConverter x:Key="ShapeTypeToVisibilityConverter"/>
         <converters:ShapeTypeNameConverter x:Key="ShapeTypeNameConverter"/>
-
+<!--#region Data Templates for list --> 
         <DataTemplate x:Key="RectangleTemplate" DataType="{x:Type models:RectangleParameters}">
             <StackPanel>
                 <TextBlock Text="Prostokąt" FontWeight="Bold" Margin="0,0,0,10"/>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="X:" Width="50"/>
-                    <TextBox Text="{Binding X}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="X" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Y:" Width="50"/>
-                    <TextBox Text="{Binding Y}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Y" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Szerokość:" Width="50"/>
-                    <TextBox Text="{Binding Width}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Width" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Wysokość:" Width="50"/>
-                    <TextBox Text="{Binding Height}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Height" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
+
         <DataTemplate x:Key="ElipseTemplate" DataType="{x:Type models:ElipseParameters}">
             <StackPanel>
                 <TextBlock Text="Elipsa" FontWeight="Bold" Margin="0,0,0,10"/>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="X:" Width="50"/>
-                    <TextBox Text="{Binding X}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="X" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Y:" Width="50"/>
-                    <TextBox Text="{Binding Y}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Y" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Szerokość:" Width="50"/>
-                    <TextBox Text="{Binding Width}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Width" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Wysokość:" Width="50"/>
-                    <TextBox Text="{Binding Height}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Height" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
+
         <DataTemplate x:Key="CircleTemplate" DataType="{x:Type models:CircleParameters}">
             <StackPanel>
                 <TextBlock Text="Koło" FontWeight="Bold" Margin="0,0,0,10"/>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Środek X:" Width="70"/>
-                    <TextBox Text="{Binding CenterX}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="CenterX" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Środek Y:" Width="70"/>
-                    <TextBox Text="{Binding CenterY}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="CenterY" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Promień:" Width="70"/>
-                    <TextBox Text="{Binding Radius}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Radius" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
@@ -81,19 +172,51 @@
                 <TextBlock Text="Linia" FontWeight="Bold" Margin="0,0,0,10"/>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="X1:" Width="50"/>
-                    <TextBox Text="{Binding X1}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="X1" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Y1:" Width="50"/>
-                    <TextBox Text="{Binding Y1}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Y1" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="X2:" Width="50"/>
-                    <TextBox Text="{Binding X2}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="X2" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Y2:" Width="50"/>
-                    <TextBox Text="{Binding Y2}" Width="100"/>
+                    <TextBox Width="100" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Y2" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
@@ -104,91 +227,213 @@
                 <!-- Position -->
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="X: " />
-                    <TextBox Text="{Binding Path=(Canvas.Left), Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="(Canvas.Left)" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                     <TextBlock Text=" Y: " />
-                    <TextBox Text="{Binding Path=(Canvas.Top), Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="(Canvas.Top)" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <!-- Dimensions -->
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Szerokość: " Width="70" />
-                        <TextBox Text="{Binding Width, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                        <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                            <TextBox.Text>
+                                <Binding Path="Width" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <controls:NumericValidationRule />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Wysokość: " Width="70" />
-                        <TextBox Text="{Binding Height, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                        <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                            <TextBox.Text>
+                                <Binding Path="Height" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <controls:NumericValidationRule />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
+
         <DataTemplate x:Key="EllipseTemplateList" DataType="{x:Type Ellipse}">
             <StackPanel Margin="5">
                 <Label Content="Elipsa" FontWeight="Bold"/>
                 <!-- Pozycja -->
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="X: " />
-                    <TextBox Text="{Binding Path=(Canvas.Left), Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="(Canvas.Left)" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                     <TextBlock Text=" Y: " />
-                    <TextBox Text="{Binding Path=(Canvas.Top), Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="(Canvas.Top)" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <!-- Wymiary -->
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Szerokość: " Width="70" />
-                        <TextBox Text="{Binding Width, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                        <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                            <TextBox.Text>
+                                <Binding Path="Width" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <controls:NumericValidationRule />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Wysokość: " Width="70" />
-                        <TextBox Text="{Binding Height, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                        <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                            <TextBox.Text>
+                                <Binding Path="Height" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <controls:NumericValidationRule />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
+
         <DataTemplate x:Key="LineTemplateList" DataType="{x:Type Line}">
             <StackPanel Margin="5">
                 <Label Content="Linia" FontWeight="Bold"/>
                 <!-- Punkt początkowy -->
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="X1: " Width="50" />
-                    <TextBox Text="{Binding X1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="X1" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text=" Y1: " Width="50" />
-                    <TextBox Text="{Binding Y1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Y1" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <!-- Punkt końcowy -->
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="X2: " Width="50" />
-                    <TextBox Text="{Binding X2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="X2" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
-                
                 <StackPanel Orientation="Horizontal">
-                   
                     <TextBlock Text=" Y2: " Width="50" />
-                    <TextBox Text="{Binding Y2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Y2" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
+
         <DataTemplate x:Key="CircleTemplateList" DataType="{x:Type models:Circle}">
             <StackPanel Margin="5">
                 <Label Content="Koło" FontWeight="Bold"/>
                 <!-- Środek -->
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Środek X: " Width="70"/>
-                    <TextBox Text="{Binding CenterX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
-                   
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="CenterX" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text=" Środek Y: " Width="70"/>
-                    <TextBox Text="{Binding CenterY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="CenterY" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
                 <!-- Promień -->
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Promień: " Width="70" />
-                    <TextBox Text="{Binding Radius, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                    <TextBox Width="50" PreviewTextInput="TextBox_PreviewTextInput">
+                        <TextBox.Text>
+                            <Binding Path="Radius" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <controls:NumericValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
+<!--#endregion-->
+
         <!-- DataTemplateSelector -->
         <local:ShapeDataTemplateSelector x:Key="ShapeDataTemplateSelector"
                                  RectangleTemplate="{StaticResource RectangleTemplateList}"
@@ -210,48 +455,73 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
-        
+
+        <!-- Menu -->
+        <Menu Grid.Row="0" Grid.ColumnSpan="3">
+            <MenuItem Header="File">
+                <MenuItem Header="Save Shapes" Command="{Binding SaveShapesCommand}"/>
+                <MenuItem Header="Load Shapes" Command="{Binding LoadShapesCommand}"/>
+            </MenuItem>
+        </Menu>
+
         <!-- Panel kontrolny -->
-        <StackPanel Orientation="Horizontal" Margin="10" Grid.Column="1">
-            <TextBlock Text="Kształt:" VerticalAlignment="Center" Margin="0,0,5,0"/>
-            <ComboBox ItemsSource="{Binding AvailableShapeTypes}" 
-                  SelectedItem="{Binding SelectedShapeType}" Width="100" Margin="0,0,10,0"/>
-            <TextBlock Text="Kolor:" VerticalAlignment="Center" Margin="0,0,5,0"/>
-            <ComboBox ItemsSource="{Binding AvailableColors}" 
-                  SelectedItem="{Binding SelectedColor}" Width="100" Margin="0,0,10,0">
-                <ComboBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Rectangle Width="16" Height="16" Fill="{Binding}" Margin="0,0,5,0"/>
-                            <TextBlock Text="{Binding Color}" />
-                        </StackPanel>
-                    </DataTemplate>
-                </ComboBox.ItemTemplate>
-            </ComboBox>
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="10" Background="LightGray">
+            <TextBlock Text="Panel kontrolny" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Kształt:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox ItemsSource="{Binding AvailableShapeTypes}" 
+                          SelectedItem="{Binding SelectedShapeType}" Width="200" Margin="0,5,0,0"/>
+            </StackPanel>
+
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Kolor:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox ItemsSource="{Binding AvailableColors}" 
+                          SelectedItem="{Binding SelectedColor}" Width="200" Margin="0,5,0,0">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="16" Height="16" Fill="{Binding}" Margin="0,0,5,0"/>
+                                <TextBlock Text="{Binding Color}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
             <ContentControl Content="{Binding CurrentShapeParameters}"
-                            ContentTemplateSelector="{StaticResource ShapeParametersTemplateSelector}"/>
-            <Button Content="Rysuj kształt" Command="{Binding DrawShapeCommand}" Margin="0,10,0,0"/>
+                            ContentTemplateSelector="{StaticResource ShapeParametersTemplateSelector}" Margin="0,0,0,10"/>
+            <Button Content="Rysuj kształt" Click="DrawShape" Width="200" Margin="0,5,0,0"/>
+            <Button Content="Usuń Kształt" Command="{Binding DeleteShapeCommand}" Width="200" Margin="0,5,0,0"/>
         </StackPanel>
 
-        <Canvas x:Name="myCanvas" Background="LightGray" Grid.Row="1" Grid.Column="1"
-        MouseLeftButtonDown="Canvas_MouseLeftButtonDown"
-        MouseMove="Canvas_MouseMove"
-        MouseLeftButtonUp="Canvas_MouseLeftButtonUp">
-            <ItemsControl ItemsSource="{Binding Shapes}">
-                <ItemsControl.ItemsPanel>
+        <!-- Canvas Section -->
+        <Canvas x:Name="myCanvas" Background="White" Grid.Row="1" Grid.Column="1" Margin="10"
+                MouseLeftButtonDown="Canvas_MouseLeftButtonDown"
+                MouseMove="Canvas_MouseMove"
+                MouseLeftButtonUp="Canvas_MouseLeftButtonUp">
+            <controls:CanvasItemsControl ItemsSource="{Binding Shapes}">
+                <controls:CanvasItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <Canvas />
+                        <Canvas/>
                     </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-               
-            </ItemsControl>
+                </controls:CanvasItemsControl.ItemsPanel>
+            </controls:CanvasItemsControl>
         </Canvas>
-        <ListView ItemsSource="{Binding Shapes}"
-          ItemTemplateSelector="{StaticResource ShapeDataTemplateSelector}"
-          Grid.Column="0" Grid.Row="1" Margin="10">
-        </ListView>
+
+        <!-- ListView Section -->
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="10" Background="LightGray">
+            <TextBlock Text="Lista kształtów" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+            <ListView ItemsSource="{Binding Shapes}"
+                      ItemTemplateSelector="{StaticResource ShapeDataTemplateSelector}"
+                      SelectedItem="{Binding CurrentShape, Mode=TwoWay}"
+                      SelectionChanged="ListView_SelectionChanged"
+                      Margin="0,5,0,0">
+            </ListView>
+        </StackPanel>
     </Grid>
 </Window>

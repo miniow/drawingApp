@@ -17,7 +17,7 @@ namespace drawingApp.Models
     }
     public class ElipseParameters : ShapeParametersBase
     {
-        public override ShapeType ShapeType => ShapeType.Rectangle;
+        public override ShapeType ShapeType => ShapeType.Ellipse;
         public double X { get; set; }
         public double Y { get; set; }
         public double Width { get; set; }

@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -89,12 +91,13 @@ namespace drawingApp.ViewModels
             {
                 _selectedColor = value;
                 OnPropertyChanged(nameof(SelectedColor));
+                UpdateCurrentShapeColor();
             }
         }
 
-        // Komendy
-        public ICommand DrawShapeCommand { get; set; }
-
+        public ICommand DeleteShapeCommand { get; }
+        public ICommand SaveShapesCommand { get; }
+        public ICommand LoadShapesCommand { get; }
         public MainViewModel()
         {
             Shapes = new ObservableCollection<Shape>();
@@ -117,55 +120,236 @@ namespace drawingApp.ViewModels
             SelectedShapeType = ShapeType.Rectangle;
             SelectedColor = Brushes.Black;
 
-            DrawShapeCommand = new RelayCommand(DrawShape);
+            DeleteShapeCommand = new RelayCommand(
+       execute: _ => DeleteShape(),
+       canExecute: _ => CurrentShape != null
+   );
 
+
+            SaveShapesCommand = new RelayCommand(
+                execute: _ =>
+                {
+                    var dialog = new Microsoft.Win32.SaveFileDialog
+                    {
+                        Filter = "JSON Files (*.json)|*.json",
+                        DefaultExt = "json"
+                    };
+                    if (dialog.ShowDialog() == true)
+                    {
+                        SaveShapesToFile(dialog.FileName);
+                    }
+                },
+                canExecute: _ => Shapes.Count > 0
+            );
+
+            LoadShapesCommand = new RelayCommand(
+                execute: _ =>
+                {
+                    var dialog = new Microsoft.Win32.OpenFileDialog
+                    {
+                        Filter = "JSON Files (*.json)|*.json",
+                        DefaultExt = "json"
+                    };
+                    if (dialog.ShowDialog() == true)
+                    {
+                        LoadShapesFromFile(dialog.FileName);
+                    }
+                }
+            );
+
+            PropertyChanged += (sender, args) =>
+            {
+                if (args.PropertyName == nameof(Shapes) || args.PropertyName == "Count")
+                {
+                    (SaveShapesCommand as RelayCommand)?.RaiseCanExecuteChanged();
+                }
+                if (args.PropertyName == nameof(CurrentShape))
+                {
+                    (DeleteShapeCommand as RelayCommand)?.RaiseCanExecuteChanged();
+                }
+            };
         }
 
-        private void DrawShape(object obj)
+        private void SaveShapesToFile(string fileName)
         {
-            Shape newShape = null;
-            switch (CurrentShapeParameters)
+            var shapesData = new List<ShapeData>();
+            foreach (var shape in Shapes)
             {
-                case RectangleParameters rectParams:
-                    newShape = new Rectangle
+                if (shape is Rectangle rect)
+                {
+                    shapesData.Add(new ShapeData
                     {
-                        Width = rectParams.Width,
-                        Height = rectParams.Height,
-                        Stroke = Brushes.Black,
-                        StrokeThickness = 2
-                    };
-                    Canvas.SetLeft(newShape, rectParams.X);
-                    Canvas.SetTop(newShape, rectParams.Y);
-                    break;
-                case CircleParameters circleParams:
-                    newShape = new Ellipse
+                        Type = ShapeType.Rectangle,
+                        X = double.IsNaN(Canvas.GetLeft(rect)) ? 0 : Canvas.GetLeft(rect),
+                        Y = double.IsNaN(Canvas.GetTop(rect)) ? 0 : Canvas.GetTop(rect),
+                        Width = rect.Width,
+                        Height = rect.Height,
+                        Color = ((SolidColorBrush)rect.Stroke).Color.ToString()
+                    });
+                }
+                else if (shape is Ellipse ellipse)
+                {
+                    shapesData.Add(new ShapeData
                     {
-                        Width = circleParams.Radius * 2,
-                        Height = circleParams.Radius * 2,
-                        Stroke = Brushes.Black,
-                        StrokeThickness = 2
-                    };
-                    Canvas.SetLeft(newShape, circleParams.CenterX - circleParams.Radius);
-                    Canvas.SetTop(newShape, circleParams.CenterY - circleParams.Radius);
-                    break;
-                case LineParameters lineParams:
-                    newShape = new Line
+                        Type = ShapeType.Ellipse,
+                        X = double.IsNaN(Canvas.GetLeft(ellipse)) ? 0 : Canvas.GetLeft(ellipse),
+                        Y = double.IsNaN(Canvas.GetTop(ellipse)) ? 0 : Canvas.GetTop(ellipse),
+                        Width = ellipse.Width,
+                        Height = ellipse.Height,
+                        Color = ((SolidColorBrush)ellipse.Stroke).Color.ToString()
+                    });
+                }
+                else if (shape is Line line)
+                {
+                    shapesData.Add(new ShapeData
                     {
-                        X1 = lineParams.X1,
-                        Y1 = lineParams.Y1,
-                        X2 = lineParams.X2,
-                        Y2 = lineParams.Y2,
-                        Stroke = Brushes.Black,
-                        StrokeThickness = 2
-                    };
-                    break;
+                        Type = ShapeType.Line,
+                        X1 = line.X1,
+                        Y1 = line.Y1,
+                        X2 = line.X2,
+                        Y2 = line.Y2,
+                        Color = ((SolidColorBrush)line.Stroke).Color.ToString()
+                    });
+                }
+                else if (shape is Circle circle)
+                {
+                    shapesData.Add(new ShapeData
+                    {
+                        Type = ShapeType.Circle,
+                        CenterX = circle.CenterX,
+                        CenterY = circle.CenterY,
+                        Radius = circle.Radius,
+                        Color = ((SolidColorBrush)circle.Stroke).Color.ToString()
+                    });
+                }
             }
 
-            if (newShape != null)
+            var json = JsonSerializer.Serialize(shapesData, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(fileName, json);
+        }
+
+        private void LoadShapesFromFile(string fileName)
+        {
+            if (!File.Exists(fileName))
             {
-                Shapes.Add(newShape);
+                MessageBox.Show("Plik nie istnieje lub nie można go otworzyć.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            var json = File.ReadAllText(fileName);
+            var shapesData = JsonSerializer.Deserialize<List<ShapeData>>(json);
+
+            Shapes.Clear();
+
+            foreach (var shapeData in shapesData)
+            {
+                Shape shape = null;
+                switch (shapeData.Type)
+                {
+                    case ShapeType.Rectangle:
+                        shape = new Rectangle
+                        {
+                            Width = shapeData.Width,
+                            Height = shapeData.Height,
+                            Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(shapeData.Color)) ?? Brushes.Black,
+                            StrokeThickness = 2,
+                            Fill = Brushes.Transparent
+                        };
+                        Canvas.SetLeft(shape, shapeData.X);
+                        Canvas.SetTop(shape, shapeData.Y);
+                        break;
+                    case ShapeType.Ellipse:
+                        shape = new Ellipse
+                        {
+                            Width = shapeData.Width,
+                            Height = shapeData.Height,
+                            Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(shapeData.Color)),
+                            StrokeThickness = 2,
+                            Fill = Brushes.Transparent
+                        };
+                        Canvas.SetLeft(shape, shapeData.X);
+                        Canvas.SetTop(shape, shapeData.Y);
+                        break;
+                    case ShapeType.Line:
+                        shape = new Line
+                        {
+                            X1 = shapeData.X1,
+                            Y1 = shapeData.Y1,
+                            X2 = shapeData.X2,
+                            Y2 = shapeData.Y2,
+                            Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(shapeData.Color)),
+                            StrokeThickness = 2
+                        };
+                        break;
+                    case ShapeType.Circle:
+                        shape = new Circle
+                        {
+                            CenterX = shapeData.CenterX,
+                            CenterY = shapeData.CenterY,
+                            Radius = shapeData.Radius,
+                            Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(shapeData.Color)),
+                            StrokeThickness = 2,
+                            Fill = Brushes.Transparent
+                        };
+                        break;
+                }
+
+                if (shape != null)
+                {
+                    shape.MouseLeftButtonDown += (sender, e) =>
+                    {
+                        CurrentShape = shape;
+                        e.Handled = true;
+                    };
+                    Shapes.Add(shape);
+                }
             }
         }
+
+        private void DeleteShape()
+        {
+            if (CurrentShape != null)
+            {
+                
+
+                if (CurrentShape.Parent is Canvas canvas)
+                {
+                    canvas.Children.Remove(CurrentShape);
+                }
+                Shapes.Remove(CurrentShape);
+                CurrentShape = null;
+            }
+        }
+
+        private bool CanDeleteShape()
+        {
+            return CurrentShape != null;
+        }
+        private void UpdateCurrentShapeColor()
+        {
+            if (_currentShape != null)
+            {
+                _currentShape.Stroke = _selectedColor;
+            }
+        }
+
 
     }
+    public class ShapeData
+    {
+        public ShapeType Type { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Width { get; set; }
+        public double Height { get; set; }
+        public double X1 { get; set; }
+        public double Y1 { get; set; }
+        public double X2 { get; set; }
+        public double Y2 { get; set; }
+        public double CenterX { get; set; }
+        public double CenterY { get; set; }
+        public double Radius { get; set; }
+        public string Color { get; set; }
+    }
+
 }

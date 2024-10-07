@@ -9,18 +9,19 @@ namespace drawingApp.ViewModels
 
         public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
-            _execute = execute;
-            _canExecute = canExecute ?? (x => true);
+            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
+            _canExecute = canExecute ?? (_ => true);
         }
 
         public bool CanExecute(object parameter) => _canExecute(parameter);
 
         public void Execute(object parameter) => _execute(parameter);
 
-        public event EventHandler CanExecuteChanged
+        public event EventHandler CanExecuteChanged;
+
+        public void RaiseCanExecuteChanged()
         {
-            add { }
-            remove { }
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }
