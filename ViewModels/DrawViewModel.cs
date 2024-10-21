@@ -31,7 +31,7 @@ namespace drawingApp.ViewModels
         private Shape _currentShape;
         public ObservableCollection<Shape> Shapes { get; set; }
         public ObservableCollection<ShapeType> AvailableShapeTypes { get; set; }
-        public ObservableCollection<Brush> AvailableColors { get; set; }
+
         public Shape CurrentShape
         {
             get => _currentShape;
@@ -105,14 +105,7 @@ namespace drawingApp.ViewModels
                 ShapeType.Circle,
                 ShapeType.None
             };
-            AvailableColors = new ObservableCollection<Brush>
-            {
-                Brushes.Black,
-                Brushes.Red,
-                Brushes.Green,
-                Brushes.Blue,
-                Brushes.Yellow
-            };
+            
             SelectedShapeType = ShapeType.Rectangle;
             SelectedColor = Brushes.Black;
 

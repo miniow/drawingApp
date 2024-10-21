@@ -306,6 +306,12 @@ namespace drawingApp.Views
             e.Handled = regex.IsMatch(e.Text);
         }
 
+        private void DrawRGBCube_Click(object sender, RoutedEventArgs e)
+        {
+            // Open the RGB Cube window
+            RGBCubeWindow rgbCubeWindow = new RGBCubeWindow();
+            rgbCubeWindow.Show();
+        }
     }
 
     public class ShapeParametersTemplateSelector : DataTemplateSelector

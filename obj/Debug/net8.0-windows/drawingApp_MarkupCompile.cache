@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\zymci\source\repos\drawingApp\App.xaml
-6811341173
+8-582576368
 
-201402555535
-2081090663741
-Styles\ButtonStyles.xaml;Styles\Teamplates.xaml;Styles\UiColors.xaml;Views\DrawView.xaml;Views\MainWindow.xaml;Views\PpmView.xaml;
+24-1865490417
+209-1765236654
+controls\ColorPickerControl.xaml;Styles\ButtonStyles.xaml;Styles\Teamplates.xaml;Styles\UiColors.xaml;Views\DrawView.xaml;Views\MainWindow.xaml;Views\PpmView.xaml;Views\RGBCubeWindow.xaml;
 
 False
 
