@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:drawingApp.Views"
         xmlns:viewModels="clr-namespace:drawingApp.ViewModels"
-        xmlns:customcontrols="clr-namespace:drawingApp.controls"
         xmlns:models="clr-namespace:drawingApp.Models"
         xmlns:controls="clr-namespace:drawingApp.Controls"
         xmlns:converters="clr-namespace:drawingApp.Converters"
@@ -479,11 +478,21 @@
                           SelectedItem="{Binding SelectedShapeType}" Width="200" Margin="0,5,0,0"/>
             </StackPanel>
 
-            <StackPanel>
+            <StackPanel Margin="0,0,0,10">
                 <TextBlock Text="Kolor:" VerticalAlignment="Center" Margin="0,0,5,0"/>
-                <customcontrols:ColorPickerControl CurrentColorBrush="{Binding SelectedColor, Mode=TwoWay}"/>
-                <Button Content="Rysuj RGB Kostkę" Width="200" Margin="0,5,0,0" Click="DrawRGBCube_Click"/>
+                <ComboBox ItemsSource="{Binding AvailableColors}" 
+                          SelectedItem="{Binding SelectedColor}" Width="200" Margin="0,5,0,0">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="16" Height="16" Fill="{Binding}" Margin="0,0,5,0"/>
+                                <TextBlock Text="{Binding Color}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
             </StackPanel>
+
             <ContentControl Content="{Binding CurrentShapeParameters}"
                             ContentTemplateSelector="{StaticResource ShapeParametersTemplateSelector}" Margin="0,0,0,10"/>
             <Button Content="Rysuj kształt" Click="DrawShape" Width="200" Margin="0,5,0,0"/>

@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\zymci\\source\\repos\\drawingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\views\\rgbcubewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:views\\rgbcubewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\viewmodels\\ppmviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:viewmodels\\ppmviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\views\\rgbcubewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:views\\rgbcubewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\views\\ppmview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:views\\ppmview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\views\\ppmview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:views\\ppmview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\models\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:models\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +38,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T01:18:11.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T02:26:54.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-10-15T02:21:44.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RGBCubeWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\RGBCubeWindow.xaml",
-              "RelativeDocumentMoniker": "Views\\RGBCubeWindow.xaml",
-              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\RGBCubeWindow.xaml",
-              "RelativeToolTip": "Views\\RGBCubeWindow.xaml",
+              "Title": "PpmView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\PpmView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\PpmView.xaml.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\PpmView.xaml.cs",
+              "RelativeToolTip": "Views\\PpmView.xaml.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAswC8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T02:33:35.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PpmView.xaml",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\PpmView.xaml",
+              "RelativeDocumentMoniker": "Views\\PpmView.xaml",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\PpmView.xaml",
+              "RelativeToolTip": "Views\\PpmView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-20T21:01:42.106Z",
+              "WhenOpened": "2024-10-14T02:28:47.913Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RGBCubeWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\RGBCubeWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\RGBCubeWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\RGBCubeWindow.xaml.cs",
-              "RelativeToolTip": "Views\\RGBCubeWindow.xaml.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAowIoAAAAbAAAAAAAAAA==",
+              "Title": "PpmViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\PpmViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\PpmViewModel.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\PpmViewModel.cs",
+              "RelativeToolTip": "ViewModels\\PpmViewModel.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAowEMAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T21:00:12.393Z",
+              "WhenOpened": "2024-10-14T02:28:28.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ImageLoader.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\ImageLoader.cs",
+              "RelativeDocumentMoniker": "Models\\ImageLoader.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\ImageLoader.cs",
+              "RelativeToolTip": "Models\\ImageLoader.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAzwMAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T02:28:26.665Z",
               "EditorCaption": ""
             }
           ]

@@ -1,22 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+Jlqm18uGyc=",
+  "dgSpecHash": "18TPGaH1XoM=",
   "success": true,
   "projectFilePath": "C:\\Users\\zymci\\source\\repos\\drawingApp\\drawingApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\zymci\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512",
-    "C:\\Users\\zymci\\.nuget\\packages\\helixtoolkit.wpf\\2.25.0\\helixtoolkit.wpf.2.25.0.nupkg.sha512"
+    "C:\\Users\\zymci\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Pakiet „HelixToolkit.Wpf 2.25.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net8.0-windows7.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
-      "libraryId": "HelixToolkit.Wpf",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

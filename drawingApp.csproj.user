@@ -7,23 +7,14 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="controls\ColorPickerControl.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\DrawView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\PpmView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\RGBCubeWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="controls\ColorPickerControl.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Styles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -40,9 +31,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\PpmView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\RGBCubeWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
