@@ -18,6 +18,21 @@ namespace drawingApp.Views
     /// <summary>
     /// Logika interakcji dla klasy PpmView.xaml
     /// </summary>
+    /// 
+
+    public class EnumToBooleanConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            return value != null && value.ToString().Equals(parameter.ToString());
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            return value != null && (bool)value ? Enum.Parse(targetType, parameter.ToString()) : Binding.DoNothing;
+        }
+    }
+
     public partial class PpmView : UserControl
     {
         private PpmViewModel ViewModel => DataContext as PpmViewModel;
@@ -49,8 +64,8 @@ namespace drawingApp.Views
 
                 if (x >= 0 && y >= 0 && x < ViewModel.CurrentImage.Bitmap.PixelWidth && y < ViewModel.CurrentImage.Bitmap.PixelHeight)
                 {
-                    var pixelData = new byte[3];
-                    ViewModel.CurrentImage.Bitmap.CopyPixels(new Int32Rect(x, y, 1, 1), pixelData, 3, 0);
+                    var pixelData = new byte[4];
+                    ViewModel.CurrentImage.Bitmap.CopyPixels(new Int32Rect(x, y, 1, 1), pixelData, 4, 0);
                     ViewModel.ImageDetails = $"Pixel at ({x},{y}): R={pixelData[0]}, G={pixelData[1]}, B={pixelData[2]}";
                 }
             }

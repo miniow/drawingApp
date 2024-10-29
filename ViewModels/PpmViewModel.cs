@@ -16,15 +16,24 @@ namespace drawingApp.ViewModels
 {
     public class PpmViewModel : ViewModelBase
     {
+        public ObservableCollection<Filter> Filters { get; set; }
+        private Filter _selectedFilter;
+        public Filter SelectedFilter
+        {
+            get => _selectedFilter;
+            set { _selectedFilter = value; OnPropertyChanged(nameof(SelectedFilter)); }
+        }
+
         private DrawableImage _currentImage;
         private ObservableCollection<DrawableImage> _images;
         private string _imageDetails;
         private double _zoomFactor = 1.0;
         private string _currentMousePosition;
-        private int _jpegQuality = 90; // Default JPEG quality is 90
+        private int _jpegQuality = 90;
 
         public ICommand LoadImageCommand { get; }
         public ICommand SaveImageCommand { get; }
+        public ICommand ApplyFilterCommand { get; }
 
         public DrawableImage CurrentImage
         {
@@ -50,7 +59,6 @@ namespace drawingApp.ViewModels
             set { _currentMousePosition = value; OnPropertyChanged(nameof(CurrentMousePosition)); }
         }
 
-        // Property for JPEG quality level
         public int JpegQuality
         {
             get => _jpegQuality;
@@ -63,16 +71,42 @@ namespace drawingApp.ViewModels
 
         public PpmViewModel()
         {
-           
+            Filters = new ObservableCollection<Filter>
+            {
+                new BrightnessFilter(20),
+                new AddFilter(0,0,0),
+                new SubtractFilter(0,0,0),
+                new DivideFilter(0,0,0),
+                new MultiplyFilter(0,0,0),
+                new GrayscaleAverageFilter(),
+                new GrayscaleWeightedFilter(),
+                new SmoothingFilter(),
+                new MedianFilter(),
+                new SobelHorizontalFilter(),
+                new SobelVerticalFilter(),
+                new HighPassFilter(),
+                new LowPassFilter(),
+                new GaussianBlurFilter(),
+                new CustomFilter()
+            };
+
             LoadImageCommand = new RelayCommand(LoadImageExecute);
             SaveImageCommand = new RelayCommand(SaveImageExecute);
+            ApplyFilterCommand = new RelayCommand(ApplySelectedFilter);
         }
-
+        private void ApplySelectedFilter(object obj)
+        {
+            if (CurrentImage?.Bitmap != null && SelectedFilter != null)
+            {
+                CurrentImage.Bitmap = SelectedFilter.Apply(CurrentImage.Bitmap);
+                OnPropertyChanged(nameof(CurrentImage));
+            }
+        }
         private void LoadImageExecute(object obj)
         {
             var dialog = new Microsoft.Win32.OpenFileDialog
             {
-                Filter = "Image Files (*.ppm, *.jpg)|*.ppm;*.jpg"
+                Filter = "Image Files (*.ppm, *.jpg, *.tif)|*.ppm;*.jpg;*.tif"
             };
 
             if (dialog.ShowDialog() == true)
@@ -80,8 +114,6 @@ namespace drawingApp.ViewModels
                 LoadImage(dialog.FileName);
             }
         }
-
-
 
         private void SaveImageExecute(object obj)
         {
@@ -92,17 +124,16 @@ namespace drawingApp.ViewModels
 
             if (dialog.ShowDialog() == true)
             {
-                SaveAsJpeg(dialog.FileName, JpegQuality); // Use selected JPEG quality
+                SaveAsJpeg(dialog.FileName, JpegQuality);
             }
         }
 
         public void LoadImage(string filePath)
         {
-            ImageLoader loader = GetLoaderForFile(filePath);
+            ImageLoader loader = ImageLoaderFactory.GetLoaderForFile(filePath);
             try
             {
                 DrawableImage image = loader.Load(filePath);
-            
                 CurrentImage = image;
                 ImageDetails = $"Loaded: {filePath}\nResolution: {image.Bitmap.PixelWidth} x {image.Bitmap.PixelHeight}";
             }
@@ -133,43 +164,15 @@ namespace drawingApp.ViewModels
             }
         }
 
-        private ImageLoader GetLoaderForFile(string filePath)
-        {
-            string extension = Path.GetExtension(filePath).ToLower();
-
-            if (extension == ".ppm")
-            {
-                using (var reader = new StreamReader(filePath))
-                {
-                    string magicNumber = reader.ReadLine();
-                    if (magicNumber == "P3")
-                        return new Ppm3ImageLoader();
-                    else if (magicNumber == "P6")
-                        return new Ppm6ImageLoader();
-                    else
-                        return new EmptyImageLoader();
-                }
-            }
-            else if (extension == ".jpg" || extension == ".jpeg")
-            {
-                return new JpgImageLoader();
-            }
-
-            return new EmptyImageLoader();
-        }
-
         public void UpdateMousePosition(Point mousePosition)
         {
             if (CurrentImage != null && CurrentImage.Bitmap != null)
             {
-                // Adjust the mouse coordinates based on zoom
                 int x = (int)(mousePosition.X / ZoomFactor);
                 int y = (int)(mousePosition.Y / ZoomFactor);
 
-                // Ensure that x and y are within image bounds
                 if (x >= 0 && x < CurrentImage.Bitmap.PixelWidth && y >= 0 && y < CurrentImage.Bitmap.PixelHeight)
                 {
-                    // Get the pixel color
                     var pixelColor = GetPixelColor(CurrentImage.Bitmap, x, y);
                     CurrentMousePosition = $"X: {x}, Y: {y}, Color: {pixelColor}";
                 }
@@ -182,14 +185,10 @@ namespace drawingApp.ViewModels
 
         private Color GetPixelColor(BitmapSource bitmap, int x, int y)
         {
-            // Create an array to hold the pixel data
-            byte[] pixels = new byte[3]; // For 24bpp images (BGR)
-
-            // Copy the pixel data at (x, y)
+            byte[] pixels = new byte[3];
             bitmap.CopyPixels(new Int32Rect(x, y, 1, 1), pixels, 3, 0);
-
-            // Convert the pixel data to a Color object
-            return Color.FromRgb(pixels[2], pixels[1], pixels[0]); // BGR to RGB
+            return Color.FromRgb(pixels[2], pixels[1], pixels[0]);
         }
     }
+
 }

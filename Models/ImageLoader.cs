@@ -174,6 +174,24 @@ namespace drawingApp.Models
             return new DrawableImage { Bitmap = bitmap };
         }
     }
+    public class TifImageLoader : ImageLoader
+    {
+        public override DrawableImage Load(string filePath)
+        {
+            try
+            {
+                var bitmap = new BitmapImage(new Uri(filePath));
+                return new DrawableImage
+                {
+                    Bitmap = bitmap,
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Failed to load TIFF image: {ex.Message}");
+            }
+        }
+    }
 
     public class EmptyImageLoader : ImageLoader
     {
@@ -221,6 +239,34 @@ namespace drawingApp.Models
             {
                 encoder.Save(fileStream);
             }
+        }
+    }
+
+    public static class ImageLoaderFactory
+    {
+        public static ImageLoader GetLoaderForFile(string filePath)
+        {
+            string extension = Path.GetExtension(filePath).ToLower();
+
+            return extension switch
+            {
+                ".ppm" => GetPpmLoader(filePath),
+                ".jpg" or ".jpeg" => new JpgImageLoader(),
+                ".tif" or ".tiff" => new TifImageLoader(),
+                _ => new EmptyImageLoader()
+            };
+        }
+
+        private static ImageLoader GetPpmLoader(string filePath)
+        {
+            using var reader = new StreamReader(filePath);
+            string magicNumber = reader.ReadLine();
+            return magicNumber switch
+            {
+                "P3" => new Ppm3ImageLoader(),
+                "P6" => new Ppm6ImageLoader(),
+                _ => new EmptyImageLoader()
+            };
         }
     }
 }
