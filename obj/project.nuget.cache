@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "18TPGaH1XoM=",
+  "dgSpecHash": "EWTI9AhFYjM=",
   "success": true,
   "projectFilePath": "C:\\Users\\zymci\\source\\repos\\drawingApp\\drawingApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\zymci\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512"
+    "C:\\Users\\zymci\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512",
+    "C:\\Users\\zymci\\.nuget\\packages\\oxyplot.core\\2.2.0\\oxyplot.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\zymci\\.nuget\\packages\\oxyplot.wpf\\2.2.0\\oxyplot.wpf.2.2.0.nupkg.sha512",
+    "C:\\Users\\zymci\\.nuget\\packages\\oxyplot.wpf.shared\\2.2.0\\oxyplot.wpf.shared.2.2.0.nupkg.sha512"
   ],
   "logs": []
 }

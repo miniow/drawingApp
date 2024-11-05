@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\zymci\\source\\repos\\drawingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\models\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:models\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\views\\histogramwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:views\\histogramwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\views\\ppmview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:views\\ppmview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\views\\histogramwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:views\\histogramwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\controls\\imagehistogramcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:controls\\imagehistogramcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\controls\\imagehistogramcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:controls\\imagehistogramcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\viewmodels\\ppmviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,15 +31,8 @@
       "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:views\\ppmview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zymci\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\models\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:models\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|c:\\users\\zymci\\source\\repos\\drawingapp\\models\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{179DF90E-3C4E-4CFB-9AA1-0AE3143E7D09}|drawingApp.csproj|solutionrelative:models\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,108 +42,129 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2024-10-29T06:07:51.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "XamlReader.cs",
-              "DocumentMoniker": "C:\\Users\\zymci\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",
-              "ToolTip": "C:\\Users\\zymci\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs[Tylko do odczytu]",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs[Tylko do odczytu]",
-              "ViewState": "AgIAAKUBAAAAAAAAAAAgwLUBAAACAAAAAQAAAA==",
+              "Title": "ImageHistogramControl.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Controls\\ImageHistogramControl.xaml.cs",
+              "RelativeDocumentMoniker": "Controls\\ImageHistogramControl.xaml.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Controls\\ImageHistogramControl.xaml.cs",
+              "RelativeToolTip": "Controls\\ImageHistogramControl.xaml.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAUwNgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:20:47.35Z",
-              "EditorCaption": "[Tylko do odczytu]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PpmView.xaml",
-              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\PpmView.xaml",
-              "RelativeDocumentMoniker": "Views\\PpmView.xaml",
-              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\PpmView.xaml",
-              "RelativeToolTip": "Views\\PpmView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-14T02:28:47.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Filter.cs",
-              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\Filter.cs",
-              "RelativeDocumentMoniker": "Models\\Filter.cs",
-              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\Filter.cs",
-              "RelativeToolTip": "Models\\Filter.cs",
-              "ViewState": "AgIAANcCAAAAAAAAAAAwwPcCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T17:26:22.816Z",
+              "WhenOpened": "2024-11-05T02:25:40.749Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PpmView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\PpmView.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\PpmView.xaml.cs",
-              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\PpmView.xaml.cs",
-              "RelativeToolTip": "Views\\PpmView.xaml.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T02:33:35.055Z",
+              "Title": "ImageHistogramControl.xaml",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Controls\\ImageHistogramControl.xaml",
+              "RelativeDocumentMoniker": "Controls\\ImageHistogramControl.xaml",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Controls\\ImageHistogramControl.xaml",
+              "RelativeToolTip": "Controls\\ImageHistogramControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-05T02:18:02.394Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RelayCommand.cs",
-              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\RelayCommand.cs",
-              "RelativeToolTip": "ViewModels\\RelayCommand.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBcAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T23:38:09.338Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PpmViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\PpmViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\PpmViewModel.cs",
-              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\PpmViewModel.cs",
-              "RelativeToolTip": "ViewModels\\PpmViewModel.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAQwF8AAAAJAAAAAAAAAA==",
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\ViewModelBase.cs",
+              "RelativeToolTip": "ViewModels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T02:28:28.726Z",
+              "WhenOpened": "2024-11-05T01:07:40.866Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ImageLoader.cs",
-              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\ImageLoader.cs",
-              "RelativeDocumentMoniker": "Models\\ImageLoader.cs",
-              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\ImageLoader.cs",
-              "RelativeToolTip": "Models\\ImageLoader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMsAAAAeAAAAAAAAAA==",
+              "Title": "PpmView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\PpmView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\PpmView.xaml.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\PpmView.xaml.cs",
+              "RelativeToolTip": "Views\\PpmView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T02:28:26.665Z",
+              "WhenOpened": "2024-11-04T23:59:21.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Filter.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\Filter.cs",
+              "RelativeDocumentMoniker": "Models\\Filter.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Models\\Filter.cs",
+              "RelativeToolTip": "Models\\Filter.cs",
+              "ViewState": "AgIAAHoBAAAAAAAAAAAAALECAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T23:37:01.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HistogramWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\HistogramWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\HistogramWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\HistogramWindow.xaml.cs",
+              "RelativeToolTip": "Views\\HistogramWindow.xaml.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T22:40:14.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PpmViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\PpmViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\PpmViewModel.cs",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\ViewModels\\PpmViewModel.cs",
+              "RelativeToolTip": "ViewModels\\PpmViewModel.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAADgv3YAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T22:32:46.788Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "e4626656-b20f-47d8-b87c-83d53039698f",
+        "Display": 0,
+        "X": 32,
+        "Y": 70,
+        "Width": 1501,
+        "Height": 754,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HistogramWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\HistogramWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\HistogramWindow.xaml",
+              "ToolTip": "C:\\Users\\zymci\\source\\repos\\drawingApp\\Views\\HistogramWindow.xaml",
+              "RelativeToolTip": "Views\\HistogramWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-04T22:34:43.507Z",
               "EditorCaption": ""
             }
           ]

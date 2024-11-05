@@ -1,5 +1,7 @@
 ﻿using drawingApp.Models;
+using drawingApp.Views;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -14,8 +16,28 @@ using System.Windows.Media.Imaging;
 
 namespace drawingApp.ViewModels
 {
+    public class ImageCommand
+    {
+        public BitmapSource ImageState { get; set; }
+
+        public ImageCommand(BitmapSource imageState)
+        {
+            ImageState = imageState;
+        }
+    }
+
     public class PpmViewModel : ViewModelBase
     {
+        private Stack<ImageCommand> _undoStack = new Stack<ImageCommand>();
+        private Stack<ImageCommand> _redoStack = new Stack<ImageCommand>();
+
+        public ICommand UndoCommand { get; }
+        public ICommand RedoCommand { get; }
+        public ICommand ShowHistogramCommand { get; }
+        public ICommand LoadImageCommand { get; }
+        public ICommand SaveImageCommand { get; }
+        public ICommand ApplyFilterCommand { get; }
+
         public ObservableCollection<Filter> Filters { get; set; }
         private Filter _selectedFilter;
         public Filter SelectedFilter
@@ -30,10 +52,6 @@ namespace drawingApp.ViewModels
         private double _zoomFactor = 1.0;
         private string _currentMousePosition;
         private int _jpegQuality = 90;
-
-        public ICommand LoadImageCommand { get; }
-        public ICommand SaveImageCommand { get; }
-        public ICommand ApplyFilterCommand { get; }
 
         public DrawableImage CurrentImage
         {
@@ -71,36 +89,98 @@ namespace drawingApp.ViewModels
 
         public PpmViewModel()
         {
-            Filters = new ObservableCollection<Filter>
-            {
-                new BrightnessFilter(20),
-                new AddFilter(0,0,0),
-                new SubtractFilter(0,0,0),
-                new DivideFilter(0,0,0),
-                new MultiplyFilter(0,0,0),
-                new GrayscaleAverageFilter(),
-                new GrayscaleWeightedFilter(),
-                new SmoothingFilter(),
-                new MedianFilter(),
-                new SobelHorizontalFilter(),
-                new SobelVerticalFilter(),
-                new HighPassFilter(),
-                new LowPassFilter(),
-                new GaussianBlurFilter(),
-                new CustomFilter()
-            };
-
+            Filters = new ObservableCollection<Filter> {
+new BrightnessFilter(20),
+new AddFilter(0,0,0),
+new SubtractFilter(0,0,0),
+new DivideFilter(0,0,0),
+new MultiplyFilter(0,0,0),
+new GrayscaleAverageFilter(),
+new GrayscaleWeightedFilter(),
+new SmoothingFilter(),
+new MedianFilter(),
+new SobelHorizontalFilter(),
+new SobelVerticalFilter(),
+new HighPassFilter(),
+new LowPassFilter(),
+new GaussianBlurFilter(),
+new CustomFilter()
+};
+            UndoCommand = new RelayCommand(UndoExecute, _ => CanUndo());
+            RedoCommand = new RelayCommand(RedoExecute, _ => CanRedo());
             LoadImageCommand = new RelayCommand(LoadImageExecute);
             SaveImageCommand = new RelayCommand(SaveImageExecute);
             ApplyFilterCommand = new RelayCommand(ApplySelectedFilter);
+            ShowHistogramCommand = new RelayCommand(ShowHistogram);
         }
+
+        private void ShowHistogram(object obj)
+        {
+            if(CurrentImage == null) return;
+            var histogramWindow = new HistogramWindow(this.CurrentImage.Bitmap);
+
+            // Subskrybuj zdarzenie, aby reagować na zmiany obrazu po normalizacji
+            histogramWindow.ImageUpdated += OnImageUpdated;
+
+            histogramWindow.Show();
+        }
+
+        // Obsługa zdarzenia aktualizacji obrazu
+        private void OnImageUpdated(object sender, BitmapSource updatedBitmap)
+        {
+            // Aktualizujemy obecny obraz w ViewModelu
+            this.CurrentImage.Bitmap = updatedBitmap;
+            OnPropertyChanged(nameof(CurrentImage));
+        }
+        private void SaveCurrentState()
+        {
+            if (CurrentImage?.Bitmap != null)
+            {
+                _undoStack.Push(new ImageCommand(CurrentImage.Bitmap.Clone()));
+                _redoStack.Clear(); // Clear the redo stack on a new operation
+            }
+        }
+        private bool CanUndo() => _undoStack.Count > 0;
+
+        private bool CanRedo() => _redoStack.Count > 0;
         private void ApplySelectedFilter(object obj)
         {
+            SaveCurrentState();
+
             if (CurrentImage?.Bitmap != null && SelectedFilter != null)
             {
                 CurrentImage.Bitmap = SelectedFilter.Apply(CurrentImage.Bitmap);
                 OnPropertyChanged(nameof(CurrentImage));
             }
+            RaiseCanExecuteChanged();
+        }
+        private void UndoExecute(object obj)
+        {
+            if (CanUndo())
+            {
+                var command = _undoStack.Pop();
+                _redoStack.Push(new ImageCommand(CurrentImage.Bitmap.Clone()));
+                CurrentImage.Bitmap = command.ImageState;
+                OnPropertyChanged(nameof(CurrentImage));
+                RaiseCanExecuteChanged(); // Update command states after undo
+            }
+        }
+
+        private void RedoExecute(object obj)
+        {
+            if (CanRedo())
+            {
+                var command = _redoStack.Pop();
+                _undoStack.Push(new ImageCommand(CurrentImage.Bitmap.Clone()));
+                CurrentImage.Bitmap = command.ImageState;
+                OnPropertyChanged(nameof(CurrentImage));
+                RaiseCanExecuteChanged(); // Update command states after redo
+            }
+        }
+        private void RaiseCanExecuteChanged()
+        {
+            ((RelayCommand)UndoCommand).RaiseCanExecuteChanged();
+            ((RelayCommand)RedoCommand).RaiseCanExecuteChanged();
         }
         private void LoadImageExecute(object obj)
         {

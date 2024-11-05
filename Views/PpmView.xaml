@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:customControls="clr-namespace:drawingApp.Controls"
          xmlns:viewModel="clr-namespace:drawingApp.ViewModels"
          xmlns:filter="clr-namespace:drawingApp.Models"
         xmlns:local="clr-namespace:drawingApp.Views"
@@ -365,7 +366,8 @@
                 <StackPanel Margin="10">
                     <Button Content="Load Image" Command="{Binding LoadImageCommand}" Margin="0,5"/>
                     <Button Content="Save as JPEG" Command="{Binding SaveImageCommand}" Margin="0,5"/>
-
+                    <Button Content="undo" Command="{Binding UndoCommand}" Margin="0,5"/>
+                    <Button Content="redo" Command="{Binding RedoCommand}" Margin="0,5"/>
                     <!-- JPEG Quality -->
                     <TextBlock Text="JPEG Quality" VerticalAlignment="Center" Margin="0,10,0,5"/>
                     <Slider Minimum="1" Maximum="100" Value="{Binding JpegQuality, Mode=TwoWay}" Width="200" />
@@ -390,6 +392,11 @@
                     <ContentControl Content="{Binding SelectedFilter}" />
 
                     <Button Content="Apply Filter" Command="{Binding ApplyFilterCommand}" Margin="0,10,0,5"/>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Histogram" Margin="0,0,0,10">
+                <StackPanel>
+                    <Button Content="Show Histogram" Command="{Binding ShowHistogramCommand}" Margin="0,5"/>
                 </StackPanel>
             </GroupBox>
         </StackPanel>
@@ -418,6 +425,7 @@
                 <Slider Minimum="0.1" Maximum="5" Value="{Binding ZoomFactor, Mode=TwoWay}" Width="200"/>
                 <TextBlock Text="{Binding ZoomFactor}" VerticalAlignment="Center" Margin="5"/>
                 <TextBlock Text="{Binding CurrentMousePosition}" Margin="10" VerticalAlignment="Center" />
+
             </StackPanel>
         </Grid>
     </Grid>

@@ -71,6 +71,7 @@ namespace drawingApp.Views
             }
         }
 
+
         //private void SaveAsJpeg_Click(object sender, RoutedEventArgs e)
         //{
         //    if (ViewModel.Images.Count == 0)

@@ -1,0 +1,42 @@
+﻿<Window x:Class="drawingApp.Views.HistogramWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:customControls="clr-namespace:drawingApp.Controls"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:drawingApp.Views"
+        mc:Ignorable="d"
+        Title="HistogramWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <customControls:ImageHistogramControl 
+    BitmapSource="{Binding BitmapSource, RelativeSource={RelativeSource AncestorType=Window}}" 
+    Threshold="{Binding Threshold, RelativeSource={RelativeSource AncestorType=Window}, Mode=TwoWay}"/>
+
+            <!-- Przyciski do normalizacji histogramu -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Button Content="Rozszerzenie histogramu" Click="OnNormalizeHistogramExtensionClicked" Margin="5"/>
+                <Button Content="Wyrównanie histogramu" Click="OnNormalizeHistogramEqualizationClicked" Margin="5"/>
+            </StackPanel>
+            <!-- Wybór metody ustalania progu -->
+            <ComboBox x:Name="ThresholdMethodSelector" SelectionChanged="OnThresholdMethodChanged" Width="200" HorizontalAlignment="Center" Margin="10">
+                <ComboBoxItem Content="Manual" Tag="Manual"/>
+                <ComboBoxItem Content="Percent Black Selection" Tag="PercentBlack"/>
+                <ComboBoxItem Content="Mean Iterative Selection" Tag="MeanIterative"/>
+                <ComboBoxItem Content="Entropy Selection" Tag="Entropy"/>
+                <ComboBoxItem Content="Minimum Error" Tag="MinimumError"/>
+                <ComboBoxItem Content="Fuzzy Minimum Error" Tag="FuzzyMinimumError"/>
+            </ComboBox>
+            <TextBlock x:Name="MethodNameTextBlock" Text="{Binding SelectedMethodName}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="10"/>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="10">
+                <Slider x:Name="ThresholdSlider" Minimum="0" Maximum="255" ValueChanged="OnThresholdSliderChanged" Width="200" Visibility="Collapsed" Margin="5"/>
+                <TextBox x:Name="ThresholdValueTextBox" IsReadOnly="True" Width="50" HorizontalAlignment="Center" Margin="5" Text="{Binding ThresholdText}"/>
+            </StackPanel>
+
+            <!-- Zbinaryzowany obraz -->
+            <Image x:Name="BinarizedImageDisplay" Width="400" Height="300" Margin="10"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
